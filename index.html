@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikash Sharma - Academic Portfolio | MIT/Stanford/Harvard Application</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1A202C;
+            background: #FFFFFF;
+        }
+        
+        .page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        .page-break {
+            page-break-before: always;
+        }
+        
+        .hero-section {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 60px;
+            min-height: 500px;
+        }
+        
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #1A202C;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content .subtitle {
+            font-size: 1.4rem;
+            color: #2B6CB0;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .hero-content .academic-focus {
+            font-size: 1.1rem;
+            color: #4A5568;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #F7FAFC, #EDF2F7);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #2B6CB0;
+        }
+        
+        .hero-image {
+            width: 280px;
+            height: 350px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #2B6CB0, #1A202C);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1rem;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 32px;
+        }
+        
+        .btn-primary {
+            background: #2B6CB0;
+            color: white;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #1A202C;
+            padding: 16px 32px;
+            border: 2px solid #1A202C;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .academic-metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, #F8FAFC 0%, #EDF2F7 100%);
+            border-radius: 16px;
+        }
+        
+        .metric {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        
+        .metric-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2B6CB0;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .metric-label {
+            font-size: 0.95rem;
+            color: #4A5568;
+            font-weight: 500;
+        }
+        
+        .section-header {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.3rem;
+            font-weight: 600;
+            color: #1A202C;
+            margin-bottom: 16px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .section-subheader {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #4A5568;
+            margin-bottom: 48px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .research-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .research-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            border: 1px solid #E2E8F0;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 40px;
+            align-items: start;
+        }
+        
+        .research-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+        }
+        
+        .research-content .research-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1A202C;
+            margin-bottom: 16px;
+        }
+        
+        .research-subtitle {
+            font-size: 1.1rem;
+            color: #2B6CB0;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .research-description {
+            color: #4A5568;
+            margin-bottom: 24px;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        
+        .research-innovation {
+            background: linear-gradient(135deg, #EBF8FF, #F0F8FF);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            border-left: 4px solid #2B6CB0;
+        }
+        
+        .innovation-title {
+            font-weight: 600;
+            color: #1E4A8C;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+        
+        .innovation-detail {
+            color: #2B6CB0;
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+        
+        .research-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .tag {
+            background: #EDF2F7;
+            color: #2D3748;
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .research-visual {
+            background: linear-gradient(135deg, #F7FAFC, #EDF2F7);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            color: #4A5568;
+            font-size: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 200px;
+        }
+        
+        .medium-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #2B6CB0;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 16px;
+            font-size: 0.95rem;
+        }
+        
+        .medium-link:hover {
+            color: #1E4A8C;
+        }
+        
+        .leadership-section {
+            background: linear-gradient(135deg, #1A202C, #2D3748);
+            color: white;
+            padding: 60px;
+            border-radius: 20px;
+            margin: 60px 0;
+            text-align: center;
+        }
+        
+        .leadership-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        
+        .leadership-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .leadership-item {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .leadership-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #63B3ED;
+            margin-bottom: 12px;
+        }
+        
+        .leadership-text {
+            font-size: 1rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .vision-section {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(135deg, #F8FAFC, #EDF2F7);
+            border-radius: 20px;
+            margin: 60px 0;
+        }
+        
+        .vision-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: #1A202C;
+            line-height: 1.4;
+            margin-bottom: 32px;
+            font-style: italic;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .vision-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .vision-item {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        
+        .vision-item h3 {
+            color: #2B6CB0;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+        
+        .contact-section {
+            background: #F7FAFC;
+            padding: 50px;
+            border-radius: 16px;
+            text-align: center;
+        }
+        
+        .contact-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #1A202C;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 24px;
+        }
+        
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #1A202C;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .contact-link:hover {
+            color: #2B6CB0;
+        }
+        
+        .university-focus {
+            background: linear-gradient(135deg, #EBF8FF, #F0F8FF);
+            padding: 40px;
+            border-radius: 16px;
+            margin: 40px 0;
+            border-left: 6px solid #2B6CB0;
+        }
+        
+        .university-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #1E4A8C;
+            margin-bottom: 16px;
+        }
+        
+        @media print {
+            .page { padding: 30px; }
+            .hero-section { grid-template-columns: 1fr; gap: 30px; }
+            .research-card { grid-template-columns: 1fr; }
+            .academic-metrics { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <div class="page">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>Vikash Sharma</h1>
+                <div class="subtitle">Lead Engineer & AI Innovation Researcher</div>
+                <div class="academic-focus">
+                    <strong>Academic Objective:</strong> Pursuing Master's at MIT/Stanford/Harvard/Oxford/Cambridge to advance research at the intersection of AI, human-centered design, and scalable systems architecture. Seeking to transform conceptual innovations into breakthrough technologies that address global challenges.
+                </div>
+                <p style="color: #4A5568; font-size: 1.05rem;">
+                    5+ years leading frontend teams at scale • 4 AI-driven social impact concepts documented • B.Tech CSE (LPU) • Currently Lead Engineer at Zopping (ZopSmart Group)
+                </p>
+                <div class="cta-buttons">
+                    <a href="#research" class="btn-primary">View Research Projects</a>
+                    <a href="#" class="btn-secondary">Download CV</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                Professional Academic Photo<br>
+                280x350px<br>
+                Scholarly, Confident<br>
+                Portrait for University<br>
+                Applications
+            </div>
+        </div>
+        
+        <!-- ACADEMIC METRICS -->
+        <div class="academic-metrics">
+            <div class="metric">
+                <span class="metric-number">5+</span>
+                <span class="metric-label">Years Industry Leadership</span>
+            </div>
+            <div class="metric">
+                <span class="metric-number">4</span>
+                <span class="metric-label">AI Research Concepts</span>
+            </div>
+            <div class="metric">
+                <span class="metric-number">14</span>
+                <span class="metric-label">Engineers Led</span>
+            </div>
+            <div class="metric">
+                <span class="metric-number">50K+</span>
+                <span class="metric-label">Users Impacted</span>
+            </div>
+        </div>
+        
+        <!-- UNIVERSITY FOCUS -->
+        <div class="university-focus">
+            <div class="university-title">Research Interest & Academic Goals</div>
+            <p style="color: #2B6CB0; font-size: 1.05rem; line-height: 1.7;">
+                My work bridges <strong>practical engineering leadership</strong> with <strong>visionary AI research</strong>. Through leading 14-member teams at scale and conceptualizing breakthrough platforms like Safora (AI public safety) and SEOBrain (AI SEO automation), I've demonstrated both the technical depth and strategic vision necessary for doctoral-level research. I seek to advance <strong>human-centered AI systems, ethical technology design,</strong> and <strong>scalable architectures for social impact</strong> at institutions that pioneer the future of technology.
+            </p>
+        </div>
+    </div>
+
+    <!-- RESEARCH PROJECTS SECTION -->
+    <div class="page page-break" id="research">
+        <h2 class="section-header">Research & Innovation Portfolio</h2>
+        <div class="section-subheader">
+            Conceptual frameworks and working prototypes that demonstrate research potential in AI-driven social impact technologies
+        </div>
+        
+        <div class="research-grid">
+            <!-- SAFORA RESEARCH -->
+            <div class="research-card">
+                <div class="research-content">
+                    <div class="research-title">Safora: AI-Powered Public Safety Ecosystem</div>
+                    <div class="research-subtitle">Flagship Research Project • Low-Code MVP Developed</div>
+                    
+                    <div class="research-description">
+                        A comprehensive framework for reimagining public safety through real-time AI risk assessment, leveraging existing urban infrastructure (CCTV networks) and crowdsourced data to create predictive safety corridors. This research addresses the critical gap between available urban data and actionable personal security insights.
+                    </div>
+                    
+                    <div class="research-innovation">
+                        <div class="innovation-title">🔬 Research Innovations:</div>
+                        <div class="innovation-detail">• First framework integrating public CCTV data for personal safety routing</div>
+                        <div class="innovation-detail">• AI risk-scoring algorithms for real-time urban threat assessment</div>
+                        <div class="innovation-detail">• Ethical AI design for vulnerable population protection</div>
+                        <div class="innovation-detail">• Cross-platform emergency response ecosystem architecture</div>
+                    </div>
+                    
+                    <div class="research-tags">
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">Real-time AI</span>
+                        <span class="tag">Urban Computing</span>
+                        <span class="tag">React Native</span>
+                        <span class="tag">Social Impact</span>
+                        <span class="tag">Ethical AI</span>
+                    </div>
+                    
+                    <a href="https://medium.com/@vikash-sharma07/safora-redefining-public-safety-with-ai-real-time-awareness-a-vision-from-bengaluru-to-the-a69d4b49870f" class="medium-link" target="_blank">
+                        📖 Read Full Research Documentation →
+                    </a>
+                </div>
+                <div class="research-visual">
+                    <strong>Research Status:</strong><br>
+                    • Low-code MVP developed<br>
+                    • Architecture whitepaper published<br>
+                    • Stakeholder feedback collected<br>
+                    • Ready for academic expansion<br><br>
+                    <strong>Academic Potential:</strong><br>
+                    PhD research in ethical AI,<br>
+                    urban computing, and<br>
+                    human-computer interaction
+                </div>
+            </div>
+            
+            <!-- SEOBRAIN RESEARCH -->
+            <div class="research-card">
+                <div class="research-content">
+                    <div class="research-title">SEOBrain.ai: Intelligent E-commerce Optimization</div>
+                    <div class="research-subtitle">AI Automation Research • Chrome Extension Prototype</div>
+                    
+                    <div class="research-description">
+                        Advanced research into autonomous SEO optimization through machine learning, addressing the complexity gap between technical SEO requirements and business execution. This work explores AI-driven decision making for digital marketing optimization at scale.
+                    </div>
+                    
+                    <div class="research-innovation">
+                        <div class="innovation-title">🔬 Research Innovations:</div>
+                        <div class="innovation-detail">• ML-driven automated SEO audit and recommendation systems</div>
+                        <div class="innovation-detail">• 70% reduction in manual optimization time through AI automation</div>
+                        <div class="innovation-detail">• Intelligent content strategy generation for e-commerce platforms</div>
+                        <div class="innovation-detail">• Scalable architecture for real-time SEO performance optimization</div>
+                    </div>
+                    
+                    <div class="research-tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">Automation</span>
+                        <span class="tag">Web Analytics</span>
+                        <span class="tag">Chrome Extension</span>
+                        <span class="tag">E-commerce</span>
+                    </div>
+                    
+                    <a href="https://medium.com/@vikash-sharma07/the-future-of-e-commerce-seo-in-the-age-of-ai-why-seobrain-is-the-next-big-leap-360d3abb7d71" class="medium-link" target="_blank">
+                        📖 Read Full Research Documentation →
+                    </a>
+                </div>
+                <div class="research-visual">
+                    <strong>Research Status:</strong><br>
+                    • Chrome extension prototype<br>
+                    • AI roadmap generator built<br>
+                    • Pilot testing completed<br>
+                    • Framework documented<br><br>
+                    <strong>Academic Potential:</strong><br>
+                    Research in autonomous systems,<br>
+                    ML for business optimization,<br>
+                    and intelligent web technologies
+                </div>
+            </div>
+            
+            <!-- GLOBETELLER RESEARCH -->
+            <div class="research-card">
+                <div class="research-content">
+                    <div class="research-title">GlobeTeller: Intelligent Travel Companion</div>
+                    <div class="research-subtitle">AI Personalization Research • Conceptual Framework</div>
+                    
+                    <div class="research-description">
+                        Research framework for AI-powered travel personalization that combines real-time safety intelligence, cultural adaptation, and predictive itinerary optimization. This work explores the intersection of AI recommendation systems and human travel behavior analysis.
+                    </div>
+                    
+                    <div class="research-innovation">
+                        <div class="innovation-title">🔬 Research Innovations:</div>
+                        <div class="innovation-detail">• Multi-factor AI recommendation engine for travel optimization</div>
+                        <div class="innovation-detail">• Real-time safety and weather integration for dynamic planning</div>
+                        <div class="innovation-detail">• Cultural adaptation algorithms for personalized experiences</div>
+                        <div class="innovation-detail">• Predictive modeling for travel behavior and preference learning</div>
+                    </div>
+                    
+                    <div class="research-tags">
+                        <span class="tag">AI Recommendation</span>
+                        <span class="tag">Predictive Analytics</span>
+                        <span class="tag">Real-time APIs</span>
+                        <span class="tag">Personalization</span>
+                        <span class="tag">Travel Tech</span>
+                        <span class="tag">Cultural AI</span>
+                    </div>
+                    
+                    <a href="https://medium.com/@vikash-sharma07/globeteller-ai-that-makes-travel-personal-safe-unforgettable-ba6a806d8979" class="medium-link" target="_blank">
+                        📖 Read Full Research Documentation →
+                    </a>
+                </div>
+                <div class="research-visual">
+                    <strong>Research Status:</strong><br>
+                    • Conceptual framework complete<br>
+                    • API integration prototype<br>
+                    • Algorithm design documented<br>
+                    • User research conducted<br><br>
+                    <strong>Academic Potential:</strong><br>
+                    HCI research, personalization<br>
+                    algorithms, and cross-cultural<br>
+                    AI system design
+                </div>
+            </div>
+            
+            <!-- MINDUNOIA RESEARCH -->
+            <div class="research-card">
+                <div class="research-content">
+                    <div class="research-title">Mindunoia: AI Mental Health Companion</div>
+                    <div class="research-subtitle">Digital Health Research • Ethical AI Framework</div>
+                    
+                    <div class="research-description">
+                        Comprehensive research framework for democratizing mental health support through AI-powered adaptive interventions. This work addresses accessibility barriers in mental healthcare while maintaining ethical standards for vulnerable population support.
+                    </div>
+                    
+                    <div class="research-innovation">
+                        <div class="innovation-title">🔬 Research Innovations:</div>
+                        <div class="innovation-detail">• Adaptive meditation and therapy recommendation systems</div>
+                        <div class="innovation-detail">• Crisis detection algorithms for real-time intervention</div>
+                        <div class="innovation-detail">• Ethical AI framework for mental health applications</div>
+                        <div class="innovation-detail">• Integration with "Guardian OS" ecosystem for holistic wellbeing</div>
+                    </div>
+                    
+                    <div class="research-tags">
+                        <span class="tag">Digital Health</span>
+                        <span class="tag">Ethical AI</span>
+                        <span class="tag">Crisis Detection</span>
+                        <span class="tag">Adaptive Systems</span>
+                        <span class="tag">Mental Health</span>
+                        <span class="tag">Accessibility</span>
+                    </div>
+                    
+                    <a href="https://medium.com/@vikash-sharma07/mindunoia-an-ai-mental-health-companion-for-the-people-who-need-it-most-23a668a0a347" class="medium-link" target="_blank">
+                        📖 Read Full Research Documentation →
+                    </a>
+                </div>
+                <div class="research-visual">
+                    <strong>Research Status:</strong><br>
+                    • Framework design complete<br>
+                    • Ethical guidelines developed<br>
+                    • Literature review published<br>
+                    • Part of Guardian OS vision<br><br>
+                    <strong>Academic Potential:</strong><br>
+                    Digital health research,<br>
+                    ethical AI development, and<br>
+                    accessible technology design
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INDUSTRY LEADERSHIP SECTION -->
+    <div class="page page-break">
+        <div class="leadership-section">
+            <h2 class="leadership-title">Industry Leadership & Technical Excellence</h2>
+            <div class="leadership-subtitle">
+                Proven track record of leading engineering teams and delivering scalable solutions at companies within the ZopSmart ecosystem, demonstrating readiness for advanced academic research.
+            </div>
+            
+            <div class="leadership-grid">
+                <div class="leadership-item">
+                    <div class="leadership-number">14</div>
+                    <div class="leadership-text">
+                        <strong>Team Members Currently Led</strong><br>
+                        Leading frontend engineering across consumer and admin platforms at Zopping, setting standards for CI/CD, performance budgets, and code quality.
+                    </div>
+                </div>
+                
+                <div class="leadership-item">
+                    <div class="leadership-number">100%</div>
+                    <div class="leadership-text">
+                        <strong>On-Time Delivery Record</strong><br>
+                        Achieved perfect delivery record across major releases at LoveLocal, earning CEO recognition for consistent performance and cross-functional collaboration.
+                    </div>
+                </div>
+                
+                <div class="leadership-item">
+                    <div class="leadership-number">40%</div>
+                    <div class="leadership-text">
+                        <strong>Performance Improvements</strong><br>
+                        Led B2B Web redesign with Next.js + SSR, improving page load speeds by ~40% and reducing peak-time crashes by ~60% for 50K+ merchants.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ACADEMIC VISION SECTION -->
+        <div class="vision-section">
+            <div class="vision-quote">
+                "The next breakthrough in AI won't just be technical—it will be in understanding how to build systems that genuinely serve humanity's most pressing needs."
+            </div>
+            
+            <div class="vision-grid">
+                <div class="vision-item">
+                    <h3>🎯 Research Focus Areas</h3>
+                    <p>Human-centered AI systems, ethical technology design, scalable architectures for social impact, cross-cultural AI applications, and digital health innovations.</p>
+                </div>
+                <div class="vision-item">
+                    <h3>🚀 Post-Graduation Vision</h3>
+                    <p>Leading research labs that bridge academic innovation with real-world implementation, focusing on AI systems that address global challenges in safety, health, and accessibility.</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 40px; background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+                <h3 style="color: #2B6CB0; margin-bottom: 16px; font-size: 1.2rem;">Why Top-Tier Universities?</h3>
+                <p style="color: #4A5568; line-height: 1.7;">
+                    My unique combination of <strong>industry leadership experience</strong> and <strong>research-driven innovation</strong> positions me to contribute meaningfully to academic communities that are shaping the future of AI and technology. I bring both the technical depth from leading enterprise-scale systems and the visionary thinking demonstrated through my conceptual research projects. At MIT, Stanford, Harvard, Oxford, or Cambridge, I seek to transform these concepts into rigorous academic research that can drive real-world impact.
+                </p>
+            </div>
+        </div>
+        
+        <!-- CONTACT SECTION -->
+        <div class="contact-section">
+            <h2 class="contact-title">Academic & Professional Contact</h2>
+            <p style="color: #4A5568; margin-bottom: 24px;">
+                Available for research collaboration discussions, academic interviews, and project consultations
+            </p>
+            
+            <div class="contact-links">
+                <a href="mailto:vikash.sharma7876@gmail.com" class="contact-link">
+                    <span>📧</span> vikash.sharma7876@gmail.com
+                </a>
+            </div>
+        </div>
